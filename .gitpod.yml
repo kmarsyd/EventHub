@@ -1,2 +1,5 @@
 tasks:
- - command: npm start
+ - command: |
+          npm install pg dotenv
+          npm install
+          npm start
