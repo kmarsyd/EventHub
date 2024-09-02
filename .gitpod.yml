@@ -12,6 +12,11 @@ tasks:
           echo "REACT_APP_API_URL=$(gp url 3001)" > .env 
           npm start
       openMode: split-right
+    - name: create tables in db
+      command: './init-db.sh'
+    - name: database
+      port: 5432
+      onOpen: ignore
 
 # in seperate terminals
 ports:
