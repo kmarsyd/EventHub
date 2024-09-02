@@ -16,7 +16,7 @@ tasks:
           echo "REACT_APP_API_URL=$(gp url 3001)" > .env
           npm start
 
-   - name: create tables in db
+    - name: create tables in db
      command: './init-db.sh'
 
 ports:
