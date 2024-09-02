@@ -13,12 +13,6 @@ tasks:
           npm start
       openMode: split-right
 
-    - name: database
-      port: 5432
-      onOpen: ignore
-      
-    - name: create tables in db
-      command: './init-db.sh'
 # in seperate terminals
 ports:
     - name: front-end
