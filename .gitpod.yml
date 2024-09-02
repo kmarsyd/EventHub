@@ -12,13 +12,13 @@ tasks:
           echo "REACT_APP_API_URL=$(gp url 3001)" > .env 
           npm start
       openMode: split-right
+      
+    - name: database # connects to the postgres db running from image
+      port: 5432
+      onOpen: ignore
 
-- name: database # connects to the postgres db running from image
-   port: 5432
-   onOpen: ignore
-
- - name: create tables in db # seed database (tables)
-   command: './init-db.sh'
+    - name: create tables in db # seed database (tables)
+      command: './init-db.sh'
 
 # in seperate terminals
 ports:
