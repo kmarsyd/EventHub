@@ -17,7 +17,7 @@ tasks:
           npm start
 
     - name: create tables in db
-     command: './init-db.sh'
+      command: './init-db.sh'
 
 ports:
     - name: front-end
